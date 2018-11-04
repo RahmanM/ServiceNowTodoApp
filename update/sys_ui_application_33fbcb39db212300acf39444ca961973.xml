@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Todo Category</name>
+        <order/>
+        <roles>x_290424_rahman_to.u_todo_category_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-04 09:30:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>33fbcb39db212300acf39444ca961973</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Todo Category</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
+        <sys_update_name>sys_ui_application_33fbcb39db212300acf39444ca961973</sys_update_name>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-04 11:36:07</sys_updated_on>
+    </sys_ui_application>
+</record_update>

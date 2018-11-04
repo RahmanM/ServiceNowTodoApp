@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-04 09:30:59</sys_created_on>
+        <sys_id>33fbcb39db212300acf39444ca96197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_290424_rahman_to_u_todo_category.x_290424_rahman_to.u_todo_category_user</sys_name>
+        <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
+        <sys_security_acl display_value="x_290424_rahman_to_u_todo_category">b3fbcb39db212300acf39444ca961977</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_33fbcb39db212300acf39444ca96197a</sys_update_name>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-04 09:30:59</sys_updated_on>
+        <sys_user_role display_value="x_290424_rahman_to.u_todo_category_user" name="x_290424_rahman_to.u_todo_category_user">bffb4b39db212300acf39444ca961912</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
