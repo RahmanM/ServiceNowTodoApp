@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	
+	c.categories = [];
+	
+	// populate the categories so we can fill the drop-down
+	c.onLoad = function(){
+		c.server.get().then(function(response) {	
+			c.categories = response.data.categories;
+		});
+	}
+	
+	c.onLoad();
+	
+	// Save the actual todo by calling the server
+	c.saveTodo = function(){
+		c.server.update().then(function(response){
+				c.data.todo_description = '';
+				c.data.sys_id = '';
+				c.data.is_active = false;
+		});
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>todo_app</id>
+        <internal>false</internal>
+        <link/>
+        <name>Todo App</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	function getCategories(){
+		var sc = new GlideRecord('x_290424_rahman_to_u_todo_category');
+		sc.addActiveQuery();
+		sc.setLimit(100);
+		sc.orderByDesc("category_description");
+		sc.query();
+		var results = [];
+		
+		while (sc.next()) {
+			if (!$sp.canReadRecord(sc))
+				continue;
+
+			var item = {};
+			//$sp.getRecordDisplayValues(item, sc, 'name,price,sys_id');
+			item.category = sc.getDisplayValue('category');
+			item.category_description = sc.getDisplayValue('category_description');
+			item.sys_id = sc.getUniqueValue('sys_id');				
+			results.push(item);
+		}
+				
+		return results;
+	}
+	
+	var categories = getCategories();
+  this.data.categories = categories;
+	
+	if(input){
+		var gr = new GlideRecord('x_290424_rahman_to_u_todo');
+		gr.initialize();
+		gr.todo_description =  input.todo_description;
+		gr.is_active = input.is_active;
+
+		// TODO: This need to be the sys_id of the category I guess? 
+		gr.category = 'travel'
+		gr.sys_id = input.sys_id;
+		gr.insert();
+
+		gs.addInfoMessage("Record added successfuly!");
+	}
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-04 11:53:02</sys_created_on>
+        <sys_id>748c6f7ddb612300acf39444ca961942</sys_id>
+        <sys_mod_count>153</sys_mod_count>
+        <sys_name>Todo App</sys_name>
+        <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
+        <sys_update_name>sp_widget_748c6f7ddb612300acf39444ca961942</sys_update_name>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-05 03:42:19</sys_updated_on>
+        <template><![CDATA[<form class="form-horizontal">
+  <div class="form-group">
+    <label for="todo-description" class="control-label col-xs-4">Todo Description:</label> 
+    <div class="col-xs-8">
+      <input id="todo-description" 
+             name="todo-description" 
+             placeholder="Todo Description" 
+             type="text" class="form-control" 
+             required="required"
+             ng-model="data.todo_description"
+             >
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-4" for="todo-category">Todo Category:</label> 
+    <div class="col-xs-8">
+      <select 
+              id="todo-category" 
+              name="todo-category" 
+              class="select form-control" 
+              required="required"
+              ng-model="data.sys_id"
+              ng-options="category.sys_id as category.category_description for category in data.categories"
+              >
+        <option value="Travel">Travel</option>
+      </select>
+    </div>
+  </div>
+<div class="form-group">
+    <div class="col-xs-offset-4 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input 
+                 type="checkbox"
+                 ng-model="data.is_active"
+                 > Is active?
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-xs-8">
+      <button 
+              name="submit" 
+              type="submit" 
+              class="btn btn-primary"
+              ng-click="c.saveTodo()"
+       >Submit
+      </button>
+    </div>
+  </div>
+</form>
+
+<pre>{{data | json}}</pre>
+]]></template>
+    </sp_widget>
+</record_update>

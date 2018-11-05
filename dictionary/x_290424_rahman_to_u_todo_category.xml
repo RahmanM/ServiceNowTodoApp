@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Todo Category" max_length="40" name="x_290424_rahman_to_u_todo_category" type="collection">
-        <element label="Category" max_length="100" name="category" type="string"/>
+        <element label="Category" mandatory="true" max_length="100" name="category" type="string"/>
         <element display="true" label="Category description" mandatory="true" max_length="1000" name="category_description" type="string"/>
     </element>
 </database>
