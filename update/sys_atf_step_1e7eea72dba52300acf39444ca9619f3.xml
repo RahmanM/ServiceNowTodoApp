@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-07 10:02:10</sys_created_on>
+        <sys_id>1e7eea72dba52300acf39444ca9619f3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
+        <sys_update_name>sys_atf_step_1e7eea72dba52300acf39444ca9619f3</sys_update_name>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-07 10:43:54</sys_updated_on>
+        <table/>
+        <test display_value="Rahman string util script include test">d7dda672dba52300acf39444ca961938</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=1e7eea72dba52300acf39444ca9619f3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>1e7eea72dba52300acf39444ca9619f3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-07 10:02:10</sys_created_on>
+        <sys_id>b9ef6632dba52300acf39444ca9619a6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-07 10:43:54</sys_updated_on>
+        <value>describe('String util tests', function() {&#13;
+	it('All the lower case strings are proper cased', function() {&#13;
+		var util = new RahmanStringUtils();&#13;
+		var input = 'rahman mahmoodi';&#13;
+		var output = util.toTitleCase(input);&#13;
+		expect(output).toBe('Rahman Mahmoodi');&#13;
+	});&#13;
+});&#13;
+// uncomment the next line to execute this script as a jasmine test&#13;
+jasmine.getEnv().execute();&#13;
+						</value>
+        <variable display_value="">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

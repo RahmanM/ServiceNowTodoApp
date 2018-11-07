@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="INSERT_OR_UPDATE">
+        <canvas_page display_value="PA New Tab">ce021d72dba12300acf39444ca961909</canvas_page>
+        <name>New Tab</name>
+        <page display_value="PA New Tab">42021d72dba12300acf39444ca961909</page>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-07 03:12:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>42021d72dba12300acf39444ca96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
+        <sys_update_name>pa_tabs_42021d72dba12300acf39444ca96190c</sys_update_name>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-07 03:12:01</sys_updated_on>
+    </pa_tabs>
+</record_update>
