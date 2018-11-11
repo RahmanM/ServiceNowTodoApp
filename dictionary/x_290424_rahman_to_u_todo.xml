@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Todo" max_length="40" name="x_290424_rahman_to_u_todo" type="collection">
+    <element attributes="hasLabels=true" label="Todo" max_length="40" name="x_290424_rahman_to_u_todo" type="collection">
         <element choice="1" dependent="category" dependent_on_field="category" display="true" label="Category" mandatory="true" max_length="32" name="category" reference="x_290424_rahman_to_u_todo_category" reference_qual="categoryISNOTEMPTY^EQ" reference_qual_condition="categoryISNOTEMPTY^EQ" type="reference" use_dependent_field="true">
             <choice/>
         </element>

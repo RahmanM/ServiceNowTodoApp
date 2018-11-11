@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Change the description field text to upper case</description>
+        <field>todo_description</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Proper case description field</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	//alert("oldValue:" + oldValue + " newValue:" + newValue);
+	// NB: Important to check of unknown as the first time old value is always unknown; otherwise the condition always true
+	if (isLoading || newValue === '' || (oldValue !== 'unknown' && newValue !== oldValue)) {
+		return;
+	}
+	
+	//Type appropriate comment here, and begin script below
+	var updatedValue = newValue.toUpperCase();
+	g_form.setValue('todo_description', updatedValue);
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>rahmanm</sys_created_by>
+        <sys_created_on>2018-11-11 00:11:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9fce4d44db392300acf39444ca9619d7</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Proper case description field</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
+        <sys_update_name>sys_script_client_9fce4d44db392300acf39444ca9619d7</sys_update_name>
+        <sys_updated_by>rahmanm</sys_updated_by>
+        <sys_updated_on>2018-11-11 07:54:51</sys_updated_on>
+        <table>x_290424_rahman_to_u_todo</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -22,7 +22,7 @@
 	spUtil.recordWatch($scope, 'x_290424_rahman_to_u_todo', '', function(name, data){
 		//debugger;
 		// NB: This is also calling the SERVER therefore we need to reset the flags!!
-		c.data.updateDb = false;
+		c.data.insertTodo = false;
 		c.data.deleteTodo = false;
 		spUtil.update($scope);
 	});
@@ -30,13 +30,13 @@
 	// Save the actual todo by calling the server
 	c.saveTodo = function(){
 		// NB: This is a custom flag to be passed to server from client as INPUT
-		c.data.updateDb = true;
+		c.data.insertTodo = true;
 		
 		c.server.update().then(function(response){
 				c.data.todo_description = '';
 				c.data.category_sys_id = '';
 				c.data.is_active = false;
-				c.data.updateDb = false;
+				c.data.insertTodo = false;
 		});
 	}
 	
@@ -126,7 +126,7 @@
 	/* ACTIONS... */
 	
 	// Add new todo
-	if(input && input.updateDb){
+	if(input && input.insertTodo){
 		var gr = new GlideRecord('x_290424_rahman_to_u_todo');
 		gr.initialize();
 		gr.todo_description =  input.todo_description;
@@ -154,14 +154,14 @@
         <sys_created_by>rahmanm</sys_created_by>
         <sys_created_on>2018-11-04 11:53:02</sys_created_on>
         <sys_id>748c6f7ddb612300acf39444ca961942</sys_id>
-        <sys_mod_count>205</sys_mod_count>
+        <sys_mod_count>206</sys_mod_count>
         <sys_name>Todo App</sys_name>
         <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
         <sys_policy/>
         <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
         <sys_update_name>sp_widget_748c6f7ddb612300acf39444ca961942</sys_update_name>
         <sys_updated_by>rahmanm</sys_updated_by>
-        <sys_updated_on>2018-11-06 22:26:16</sys_updated_on>
+        <sys_updated_on>2018-11-10 09:00:38</sys_updated_on>
         <template><![CDATA[<form class="form-horizontal">
   <div class="form-group">
     <label for="todo-description" class="control-label col-xs-4">Todo Description:</label> 
