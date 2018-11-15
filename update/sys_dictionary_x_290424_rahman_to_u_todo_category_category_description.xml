@@ -53,15 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>rahmanm</sys_created_by>
         <sys_created_on>2018-11-04 09:31:43</sys_created_on>
-        <sys_id>ce0c0f39db212300acf39444ca9619dd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>591fa615db312300acf39444ca961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Category description</sys_name>
         <sys_package display_value="Rahman_Todo_App" source="x_290424_rahman_to">75158771db212300acf39444ca9619ab</sys_package>
         <sys_policy/>
         <sys_scope display_value="Rahman_Todo_App">75158771db212300acf39444ca9619ab</sys_scope>
         <sys_update_name>sys_dictionary_x_290424_rahman_to_u_todo_category_category_description</sys_update_name>
-        <sys_updated_by>rahmanm</sys_updated_by>
-        <sys_updated_on>2018-11-04 11:03:09</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-11-15 04:23:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
